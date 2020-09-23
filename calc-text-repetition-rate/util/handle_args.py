@@ -1,4 +1,4 @@
-from colourful_print import colourful_print
+from .colourful_print import colourful_print
 
 
 def handle_args(args, required_num):
