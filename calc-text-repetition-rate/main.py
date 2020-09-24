@@ -30,7 +30,7 @@ def main():
         # 若原始文件和待比较的文件的段落数量均大于0
         if len(org_sentences) and len(cmp_sentences):
             inst = RepetitionRateWithMatrix(org_sentences, cmp_sentences)
-            res = inst.calc_repetition_rate()
+            res = inst.calc()
             matrix_end = time.time()
             matrix_time = matrix_end - matrix_start
 

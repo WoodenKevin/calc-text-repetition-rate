@@ -21,20 +21,18 @@ class RepeatedStrWithMatrix(object):
                 if i and j:
                     if self.matrix[i - 1][j - 1] and not self.matrix[i][j]:
                         self._push_res(i, j)
-
-        if self.org_str_len and self.cmp_str_len:
-            if self.matrix[self.cmp_str_len - 1][self.org_str_len - 1] != 0:
-                self._push_res(self.cmp_str_len, self.org_str_len)
+                if i == self.cmp_str_len - 1 or j == self.org_str_len - 1:
+                    if self.matrix[i][j] != 0:
+                        self._push_res(i + 1, j + 1)
 
     def _push_res(self, i, j):
         length = self.matrix[i - 1][j - 1]
 
-        self.res_lst.append(self.org_str[j - length:j])
+        if length > 1:
+            self.res_lst.append(self.org_str[j - length:j])
 
     def get_res(self):
         repeated_str_len = len(''.join(self.res_lst))
-        if repeated_str_len > self.cmp_str_len:
-            repeated_str_len = self.cmp_str_len
 
         return {
             'org_str': self.org_str,
