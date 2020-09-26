@@ -6,7 +6,7 @@ This project can be applied to calculate repetition rate of two given files and 
 
 ## Install
 
-This project uses **[python](https://python.org)** and **[PyPI](https://pypi.org)**. Go check them out if you don't have them locally installed.
+This project uses **[Python](https://python.org)** and **[PyPI](https://pypi.org)**. Go check them out if you don't have them locally installed.
 
 ```
 $ pip install -r requirements.txt
@@ -24,7 +24,7 @@ $ python main.py [original_file.txt] [file_to_compare_with.txt] [output.txt]
 ### Unit test
 
 ```
-$ cd calc-text-repetition-rate\test
+$ cd calc-text-repetition-rate/test
 $ python test_matrix.py
 ```
 

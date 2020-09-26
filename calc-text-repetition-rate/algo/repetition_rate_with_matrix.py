@@ -26,7 +26,7 @@ class RepetitionRateWithMatrix(object):
                         inst = RepeatedStrWithMatrix(self._org_sentences[i][j],
                                                      self._cmp_sentences[i][j])
                         res = inst.get_res()
-                        print(res)
+
                         repeated_len += res['repeated_str_len']
                         cmp_word_len += res['cmp_str_len']
 
